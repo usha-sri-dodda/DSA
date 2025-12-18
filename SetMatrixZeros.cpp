@@ -26,7 +26,6 @@ public:
         if(mat[0][0]==0){
             for(j=0;j<n;j++)    mat[0][j]=0;
         }
-        
         if(col0==0){
             for(i=0;i<m;i++)    mat[i][0]=0;
         }
