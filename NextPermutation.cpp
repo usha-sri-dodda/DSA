@@ -9,6 +9,7 @@ public:
                 break;
             }
         }
+        
         if(idx==-1) {
             reverse(nums.begin(),nums.end());
             return ;
