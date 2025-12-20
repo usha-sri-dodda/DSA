@@ -3,7 +3,6 @@ public:
     int rob(vector<int>& nums) {
         int prev=nums[0],prev2=0;
         int n=nums.size();
-        
         for(int i=1;i<n;i++){
             int take=nums[i];
             if(i>1) take+=prev2;
