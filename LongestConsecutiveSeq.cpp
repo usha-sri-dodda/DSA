@@ -1,3 +1,4 @@
+// Method 1
 class Solution {
 public:
     int longestConsecutive(vector<int>& nums) {
@@ -20,6 +21,9 @@ public:
         return ans;
     }
 };
+// TC O(3n) 
+// SC O(n)
+
 
 // Method 2
 class Solution {
