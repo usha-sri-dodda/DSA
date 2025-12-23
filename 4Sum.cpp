@@ -10,6 +10,7 @@ public:
                 if(l!=i+1&&nums[l]==nums[l-1])  continue;
                 j=l+1;
                 k=n-1;
+                
                 while(j<k){
                     long long sum=nums[i];
                     sum+=nums[l];
