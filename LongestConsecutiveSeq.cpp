@@ -1,51 +1,55 @@
-// Method 1
+
+#include <bits/stdc++.h>
+using namespace std;
+
 class Solution {
 public:
-    int longestConsecutive(vector<int>& nums) {
-        unordered_set<int>s(nums.begin() , nums.end());
-        int number , count = 0 , ans = 0;
-        for(int nums : s){
-            if(s.find(nums - 1) == s.end()){
-                number = nums;
-                count = 0;
-            while(s.find(number) != s.end()){
-                number += 1;
-                count++;
-            }
-            }
-            if(count > ans){
-                ans = count;
-            }
-            count = 0;
+    int longestConsecutive(vector<int>& a) {
+        int n = a.size();
+        // If the array is empty
+        if (n == 0) return 0; 
+    
+        // Initialize the longest sequence length
+        int longest = 1; 
+        unordered_set<int> st;
+    
+        // Put all the array elements into the set
+        for (int i = 0; i < n; i++) {
+            st.insert(a[i]);
         }
-        return ans;
-    }
-};
-// TC O(3n) 
-// SC O(n)
-
-
-// Method 2
-class Solution {
-public:
-    int longestConsecutive(vector<int>& arr) {
-        int n=arr.size();
-        sort(arr.begin(),arr.end());
-        int lastSmaller=INT_MIN,count=0,longest=0;
-        for(int i=0;i<n;i++){
-            if(arr[i]-1==lastSmaller){
-                count++;
-                lastSmaller=arr[i];
+    
+        /* Traverse the set to 
+           find the longest sequence  */
+        for (auto it : st) {
+            // Check if 'it' is a starting number of a sequence
+            if (st.find(it - 1) == st.end()) {
+                // Initialize the count of the current sequence
+                int cnt = 1; 
+                // Starting element of the sequence
+                int x = it; 
+    
+                // Find consecutive numbers in the set
+                while (st.find(x + 1) != st.end()) {
+                    // Move to the next element in the sequence
+                    x = x + 1; 
+                    // Increment the count of the sequence
+                    cnt = cnt + 1; 
+                }
+                // Update the longest sequence length
+                longest = max(longest, cnt);
             }
-            else if(arr[i]!=lastSmaller){
-                count=1;
-                lastSmaller=arr[i];
-            }
-            longest=max(longest,count);
         }
         return longest;
     }
 };
-// TC O(nlogn)+O(n)
-// SC O(n)
 
+int main() {
+    vector<int> a = {100, 4, 200, 1, 3, 2}; 
+
+    // Create an instance of solution class
+    Solution solution; 
+    // Function call for finding longest consecutive sequence
+    int ans = solution.longestConsecutive(a); 
+    cout << "The longest consecutive sequence is " << ans << "\n";
+    return 0;
+}
