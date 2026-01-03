@@ -16,7 +16,7 @@ public:
     }
 };
 
-// LowerBound
+// LowerBound or Search Insert position
 class Solution {
 public:
     int lowerBound(vector<int>& nums, int target) {
