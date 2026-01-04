@@ -3,7 +3,6 @@ using namespace std;
 
 class Solution {
 public:
-
     // Function to sort array containing 0s, 1s, and 2s using Dutch National Flag Algorithm
     void sortZeroOneTwo(vector<int>& nums) {
         // Initialize three pointers: low, mid starting from 0, high from end of array
