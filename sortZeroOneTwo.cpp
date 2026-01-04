@@ -33,9 +33,7 @@ public:
 int main() {
     Solution obj;
     vector<int> nums = {2, 0, 2, 1, 1, 0};
-
     obj.sortZeroOneTwo(nums);
-
     for (int val : nums)
         cout << val << " ";
 
