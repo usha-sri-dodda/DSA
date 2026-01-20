@@ -10,6 +10,7 @@ public:
 
         // Initialize two pointers for both arrays
         int i = 0, j = 0;
+       
  // Loop until either pointer reaches the end
         while (i < n && j < m) {
             // If current element in arr1 is smaller
