@@ -3,7 +3,7 @@ using namespace std;
 
 class Solution {
 public:
-    // Function to find union of two sorted arrays using two pointers
+   
     vector<int> findUnion(int arr1[], int arr2[], int n, int m) {
         // Vector to store union elements
         vector<int> Union;
