@@ -3,3 +3,4 @@ This repository consists of the solutions for the dsa problems that I have solve
 I am adding the files from now on. I have already solved many problems in the Leetcode..
 Today I have solved the square root of an integer problem using binary search approach.
 Today I have solved set matrix zeros leetcode problem.
+code to find min biwise or array 
