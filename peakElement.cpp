@@ -1,4 +1,4 @@
-
+int peakElement(vector<int>& nums){
 		if(nums.length == 1) return 0; // single element
         
         int n = nums.length;
@@ -18,3 +18,4 @@
             else if(nums[mid] < nums[mid+1]) start = mid + 1;
         }
         return -1; // dummy return statement
+}
