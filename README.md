@@ -12,3 +12,4 @@ k th missing positive integer
 
 Median of sorted arrays
 Search in 2D array
+solved sort chars by frequency 
