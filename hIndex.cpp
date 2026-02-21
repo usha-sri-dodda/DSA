@@ -1,0 +1,20 @@
+class Solution {
+  public:
+    int hIndex(vector<int>& arr) {
+        // code here
+        
+        int n=arr.size();
+        vector<int> freq(n+1);
+        for(int i=0;i<n;i++){
+            if(arr[i]>=n)   freq[n]+=1;
+            else freq[arr[i]]+=1;
+        }
+        int idx=n;
+        int s=freq[n];
+        while(s<idx){
+            idx--;
+            s+=freq[idx];
+        }
+        return idx;
+    }
+};
