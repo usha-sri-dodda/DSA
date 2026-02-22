@@ -10,7 +10,7 @@ square root of x using binary search function has been added to the repository
 Capacity To Ship Packages Within D Days
 k th missing positive integer
 Median of sorted arrays
-Search in 2D array
+Search in 2D array 
 solved sort chars by frequency 
 Linked list problems
 Recursion problem
