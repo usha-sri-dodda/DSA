@@ -28,12 +28,25 @@ public:
     }
 };
 
-// Driver code
-int main() {
-    Solution obj;
-    vector<int> prices = {7, 1, 5, 3, 6, 4};
+//Approach 2
+int dp[100001];
+    int solve(int idx,vector<int>& prices, vector<int>& suff){
+        int n=prices.size();
+        if(idx==n-1)  return 0;
+        if(dp[idx]!=-1) return dp[idx];
+        int ans =suff[idx+1]-prices[idx];
+        
+        ans=max(ans,solve(idx+1,prices,suff));
+        return dp[idx]=ans;
+    }
+    int maxProfit(vector<int>& prices) {
+        int n=prices.size();
+        memset(dp,-1,sizeof(dp));
+        vector<int> suff_max(n);
+        suff_max[n-1]=prices[n-1];
+        for(int i=n-2;i>=0;i--){
+            suff_max[i]=max(prices[i],suff_max[i+1]);
+        }
 
-    cout << obj.stockbuySell(prices) << endl;
-
-    return 0;
-}
+        return solve(0,prices,suff_max);
+    }
