@@ -1,4 +1,3 @@
-
 class Solution {
   public:
     void solve(vector<vector<int>>& maze, int n, int i, int j, string path, vector<string>& res){
@@ -9,21 +8,15 @@ class Solution {
         if(i < 0 || j < 0 || i >= n || j >= n || maze[i][j] == 0)   return;
         
         maze[i][j] = 0;
-        path += 'R';
-        solve(maze, n, i, j + 1, path, res);
-        path.pop_back();
         
-        path += 'L';
-        solve(maze, n, i, j - 1, path, res);
-        path.pop_back();
+        solve(maze, n, i, j + 1, path + 'R', res);
+
+        solve(maze, n, i, j - 1, path + 'L', res);
+
+        solve(maze, n, i + 1, j, path + 'D', res);
+
+        solve(maze, n, i - 1, j, path + 'U', res);
         
-        path += 'D';
-        solve(maze, n, i + 1, j, path, res);
-        path.pop_back();
-        
-        path += 'U';
-        solve(maze, n, i - 1, j, path, res);
-        path.pop_back();
         maze[i][j] = 1;
         return;
     }
