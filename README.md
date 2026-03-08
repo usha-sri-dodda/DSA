@@ -4,6 +4,6 @@ Recursion:
  m-coloring
  rat in a maze
  Sudoku solver
- 
+ n-queens
  
  
