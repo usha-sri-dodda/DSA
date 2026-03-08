@@ -3,7 +3,7 @@ This repository consists of the solutions for the dsa problems that I have solve
 Recursion:
  m-coloring
  rat in a maze
- 
+ Sudoku solver
  
  
  
