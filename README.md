@@ -5,5 +5,6 @@ Recursion:
  rat in a maze
  Sudoku solver
  n-queens
- 
+Binary Search :
+ single element
  
