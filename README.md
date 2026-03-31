@@ -8,3 +8,5 @@ Recursion:
 Binary Search :
  single element
  
+Dynamic Programming :
+ 
